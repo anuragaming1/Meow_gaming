@@ -75,6 +75,9 @@ RunService.Stepped:Connect(function()
 end)
 
 print("FPS boost")
+
+
+
 --//
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -84,16 +87,9 @@ local LocalPlayer = Players.LocalPlayer
 local ESPFolder = Instance.new("Folder")
 ESPFolder.Name = "ESPFolder"
 ESPFolder.Parent = game.CoreGui
-
---//
 local ESPs = {}
-
---//
 local function CreateESP(player)
-    --//
     if player == LocalPlayer then return end
-
-    -- //
     if ESPs[player] then
         ESPs[player]:Destroy()
         ESPs[player] = nil
